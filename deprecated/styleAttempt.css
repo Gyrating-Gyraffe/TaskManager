@@ -1,0 +1,125 @@
+:root {
+    --mainColor: red;
+    --secondaryColor: #F9B69C;
+    --ternaryColor: darkgrey;
+}
+
+@font-face {
+    font-family: 'mondayCartoon';
+    src: url('resources/fonts/mainfont.tff');
+    src: url('resources/fonts/mainfont.woff') format('woff');
+    
+}
+
+html {
+    font-size: 14px;
+    font-family: mondayCartoon;
+}
+
+
+
+body {
+    background-color: var(--secondaryColor);
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.notepadWrapper {
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 13%;
+    width: 60%;
+    height: 73%;
+    overflow: hidden;
+}
+.notepadText {
+    position: absolute;
+    overflow: auto;
+    height: 80%;
+    width: 100%;
+    padding: 0%;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-family: mondayCartoon;
+}
+.notepadDate {
+    position: absolute;
+    margin-top: 93%;
+    overflow: hidden;
+    height: 15%;
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.noteDelete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.formRow *:nth-child(even){
+    background-color: red;
+}
+.formRow *:nth-child(odd){
+    background-color: green;
+}
+.formRow {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.formLabel {
+    position: absolute;
+    height: 50px;
+    width: 14vw;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+.formInput {
+    height: 50px;
+    width: 44vw;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+@media (min-width: 560px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+    
+}

@@ -1,0 +1,303 @@
+/* CUSTOM SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #5e292f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bd3e43;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #de2e34;
+}
+
+/* tri-color variables */
+:root {
+    --mainColor: #e0af46;
+    --secondaryColor: #e3cfaa;
+    --tertiaryColor: #5e292f;
+}
+
+/* custom font */
+@font-face {
+    font-family: 'mondayCartoon';
+    src: url('resources/downloaded/Caveat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    /* Comment */
+    font-style: normal;
+
+}
+@font-face {   
+    font-family: 'mexcellent';
+    src: url('resources/fonts/mexcellent.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--tertiaryColor);
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#fullscreenOverlay {
+    pointer-events: none;
+    position: fixed;
+    translate: -10vw;
+    z-index: 1;
+    width: 110vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.593);
+}
+
+textarea {
+    resize: none;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.notepadContainer {
+    transition: position cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.notepadWrapper {
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 13%;
+    width: 60%;
+    height: 73%;
+    overflow: hidden;
+}
+.notepadText {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: 80%;
+    width: 100%;
+    padding: 0%;
+
+    font-size: 1.2rem;
+    font-family: 'mondayCartoon', sans-serif;
+}
+.notepadDate {
+    position: absolute;
+    margin-top: 88%;
+    overflow: hidden;
+    height: 25%;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'mondayCartoon', sans-serif;
+}
+
+.noteDelete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    color: #ce3136;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    height: 50px;
+    width: 50px;
+}
+.noteDelete:hover {
+    color: #fc484e;
+}
+
+
+/* MAIN FORM DESIGN ADJUSTMENTS, CORRECTIONS AND BACKGROUND IMAGE PARAMETERS 
+    
+    Note to self: Next time don't use bootstrap for very specific tasks such as this (adjusting inputs to match a notebook's lines).
+    Use custom classes for full control.
+*/
+
+#mainHeader {
+    margin-top: 0;
+    margin-bottom: 3vh;
+    padding: 0;
+}
+
+#mainHeader h1 {
+    font-family: 'mexcellent';
+    color: var(--tertiaryColor);
+    font-size: 4.3rem;
+}
+
+#mainForm {
+    width: calc(100% + 13px);
+    translate: -6.5px;
+    
+    background-image: url("resources/images/notepadform2.png");
+    padding-top: 22px;
+    padding-left: 12%;
+    /* Control the height of the image */
+    min-height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: 0px 502px;
+    background-repeat: repeat;
+    background-size: 100% 930px;
+    position: relative;
+
+    min-width: 300px;
+    border-radius: 0px;
+    border: #5e292f 0px solid;
+}
+
+.form-control {
+    border: none;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    line-height: 1;
+
+    resize: none; /*remove the textarea resize handle on the bottom right*/
+}
+
+.form-group {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+#timeFormGroup {
+    margin-top: 29.5px;
+}
+
+#taskArea {
+    height: 98px;
+}
+
+.jumbotron * {
+    font-family: 'mondayCartoon', sans-serif;
+    font-size: 23px;
+    color: #5e292f;
+}
+
+.jumbotron {
+    background-color: var(--secondaryColor);
+    margin-top: 10vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 0;
+    position: fixed;
+    height: 100vh;
+    width: 80vw;
+    border: 7px #e9dbbe solid;
+    box-shadow: 5px 5px 5px rgb(54, 37, 37), -5px -5px 5px rgb(59, 30, 30);
+}
+
+.control-label {
+    font-size: 30px;
+    margin-top: 9px;
+    translate: 0 -24px;
+}
+
+#clipboard {
+    overflow: hidden;
+    background-color: var(--mainColor);
+    width: 90vw;
+    border: solid #e1c081 0.6rem;
+    outline: solid #5e292f 0.3rem;
+    /* box-shadow: #5e292f 20px 10px 40px, #5e292f -20px 10px 40px; */
+    border-radius: 4.5rem 4.5rem 0 0;
+    z-index: 2;
+}
+#clipboardHeaderContainer {
+    border: #e1c081 1px solid;
+    border-radius: 1rem;
+    background-color: #e1c081;
+    margin: auto;
+    margin-top: -1.5rem;
+    width: 15rem;
+    height: 5rem;
+    padding-top: 1rem;
+}
+#clipboard h2 {
+    color: #ad4447;
+    font-size: 2rem;
+    text-shadow: -0.05rem -0.05rem #000000, 0.05rem 0.05rem #000000, 0.05rem -0.05rem #000000, -0.05rem 0.05rem #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+
+@media (min-width: 560px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #mainForm {
+        padding-top: 8px;
+    }
+    .form-control {
+        translate: 0 -20px;
+    }
+    #time {
+        translate: 0 -5px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    #mainForm {
+        padding-top: 22px;
+    }
+    .form-control {
+        translate: 0;
+    }
+    #time {
+        translate: 0;
+    }
+    .form-group {
+        margin-top: 0;
+        margin-bottom: 33px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
+    
+}
