@@ -1,3 +1,6 @@
+Version 1.0.0:
+- Added validation and user notification for invalid form submissions
+
 Version 0.9.5:
 - Added styling to form buttons (Reset & Submit)
 

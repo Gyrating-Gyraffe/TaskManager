@@ -39,22 +39,25 @@
                     <div class="col-sm-10 col-sm-offset-1">
                         <textarea class="form-control" name="taskDescription" id="taskArea"
                             placeholder="Write your task description here." rows="4" maxlength="255"></textarea>
+                            <div class="validationMessage" id="textValidationMessage"></div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-1" for="date">Date:</label>
                     <div class="col-sm-10 col-sm-offset-1">
                         <input type="date" class="form-control" name="date" id="date">
+                        <div class="validationMessage" id="dateValidationMessage"></div>
                     </div>
                 </div>
                 <div class="form-group" id="timeFormGroup">
                     <label class="control-label col-sm-1" for="time">Time:</label>
                     <div class="col-sm-10 col-sm-offset-1">
                         <input type="time" class="form-control" name="time" id="time">
+                        <div class="validationMessage" id="timeValidationMessage"></div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-6">
+                    <div class="col-sm-offset-2 col-sm-6" id="formButtons">
                         <button type="reset" class="btn btn-default" id="formResetButton">Reset</button>
                         <button type="submit" class="btn btn-default" id="formSubmitButton">Submit</button>
                     </div>

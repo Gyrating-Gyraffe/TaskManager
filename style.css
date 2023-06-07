@@ -78,10 +78,6 @@ footer {
     padding: 25px;
 }
 
-.notepadContainer {
-    transition: position cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-
 .notepadWrapper {
     position: absolute;
     margin-top: 13%;
@@ -164,9 +160,7 @@ footer {
     background-size: 100% 930px;
     position: relative;
 
-    min-width: 300px;
-    border-radius: 0px;
-    border: #5e292f 0px solid;
+    min-width: 300px; 
 }
 
 .form-control {
@@ -233,6 +227,7 @@ footer {
     border-radius: 4.5rem 4.5rem 0 0;
     z-index: 2;
 }
+
 #clipboardHeaderContainer {
     border: #e1c081 1px solid;
     border-radius: 1rem;
@@ -284,6 +279,13 @@ footer {
     border: 0.1rem #e3cfaa solid;
     background-color: #ad4447;
     color: #e0af46;
+}
+
+.validationMessage {
+    text-align: start;
+    color: #ce3136;
+    font-size: 1.4rem;
+    text-shadow: -0.02rem -0.02rem #de2e34, 0.02rem 0.02rem #000000, 0.02rem -0.02rem #e0af46, -0.02rem 0.02rem #000000;
 }
 
 @media (min-width: 560px) {

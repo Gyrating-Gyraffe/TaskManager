@@ -21,7 +21,7 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
         event.preventDefault();
         
         // Validate task description
-        document.getElementById("taskArea").value = document.getElementById("taskArea").value || "Empty Task";
+        if(!validateForm()) return; 
 
         // Get form input, Create note + Store data, Reset form
         const formObject = formToObject(document.getElementsByClassName("form-control"));
@@ -88,6 +88,26 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
         // Default values
         dateElement.value = dateToday;
         timeElement.value = timeToday;
+    }
+
+    // Validate the three form inputs, if invalid notifies the user and returns false
+    function validateForm() {
+        const valid = true;
+        
+        [document.getElementById("taskArea"), document.getElementById("date"), document.getElementById("time")]
+        .forEach(element => {
+            if(!element.value) {
+                const validateDiv = element.nextElementSibling;
+                validateDiv.innerHTML = "Please fill out this form.";
+                element.addEventListener("focus", (event) => {
+                    validateDiv.innerHTML = "";
+                    element.removeEventListener("focus", this);
+                });
+                valid = false;
+            }
+        });
+
+        return valid;
     }
 
     initialize();
