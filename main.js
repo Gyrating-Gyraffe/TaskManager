@@ -26,7 +26,11 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
         // Get form input, Create note + Store data, Reset form
         const formObject = formToObject(document.getElementsByClassName("form-control"));
         notepad.createNote(formObject);
-        this.reset();
+
+        // Store data
+        storage.storeData(formObject);
+
+        resetForm(this);
     };
 
     // Subscribes to submission event, loads stored data, instantiates notes, corrects date:time user input
@@ -42,7 +46,7 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
         dateElement.min = dateToday;
         let timeToday = dateAndTime.split("T")[1].substring(0, 5);
         
-        //Placeholder
+        // Default values
         dateElement.value = dateToday;
         timeElement.value = timeToday;
 
@@ -66,6 +70,24 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
         for (const formObject of formObjArray) {
             notepad.createNote(formObject);
         }
+    }
+
+    function resetForm(form) {
+        form.reset();
+
+        // DOM
+        const dateElement = document.getElementById("date");
+        const timeElement = document.getElementById("time");
+
+        // Date & Time Correction
+        let dateAndTime = new Date().toISOString(); // ISO 8601 format: "YYYY-MM-DDTHH:mm:ss:sssZ"
+        let dateToday = dateAndTime.split("T")[0];
+        dateElement.min = dateToday;
+        let timeToday = dateAndTime.split("T")[1].substring(0, 5);
+        
+        // Default values
+        dateElement.value = dateToday;
+        timeElement.value = timeToday;
     }
 
     initialize();

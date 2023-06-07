@@ -77,12 +77,9 @@ export class Notepad {
         // Append newElement to the notes container in the DOM
         const notesContainer = document.getElementById("notepadContainer");
         notesContainer.appendChild(newElement);
-
-        // Store data
-        this.storage.storeData(formObject);
     }
 
-    /** Reformats the date and time. Accepts the localstorage format
+    /** Reformats the date and time. Accepts the ISO 8601 format
      * @param {String} date Date in YYYY-MM-DD
      * @param {String} time Time in HH-MM
      * @returns Date as DD/MM/YYYY - HH:MM
