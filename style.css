@@ -251,6 +251,40 @@ footer {
     font-weight: 700;
 }
 
+#formResetButton {
+    border-radius: 1rem 0 0 1rem;
+    width: 5rem;
+    margin-right: -0.1rem;
+    border: 0.1rem #e1c081 solid;
+    font-size: 1.3rem;
+
+    background-color: #5e292f;
+    color: #e0af46;
+
+    transition: 0.25s;
+}
+#formSubmitButton {
+    border-radius: 0 1rem 1rem 0;   
+    width: 5rem;
+    margin-left: -0.1rem;
+    border: 0.1rem #e1c081 solid;
+    font-size: 1.3rem;
+
+    background-color: #e0af46;
+    color: #5e292f;
+
+    transition: 0.25s;
+}
+#formResetButton:hover {
+    border: 0.1rem #e3cfaa solid;
+    background-color: #ad4447;
+    color: #e0af46;
+}
+#formSubmitButton:hover {
+    border: 0.1rem #e3cfaa solid;
+    background-color: #ad4447;
+    color: #e0af46;
+}
 
 @media (min-width: 560px) {
     html {

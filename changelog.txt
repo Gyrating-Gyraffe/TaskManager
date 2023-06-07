@@ -1,4 +1,7 @@
+Version 0.9.5:
+- Added styling to form buttons (Reset & Submit)
+
 Version 0.9.0:
 - Fixed a bug where the local storage kept multiplying on page refresh due to improper 
-    delegation of control over storage
-- Added a custom form reset function that clears description text and sets time to default values
+    delegation of control over storage [b4610bb](https://github.com/Gyrating-Gyraffe/TaskManager/commit/b4610bb18c150eb81422016f88f91630a56d2129)
+- Added a custom form reset function that clears description text and sets time to default values [b4610bb](https://github.com/Gyrating-Gyraffe/TaskManager/commit/b4610bb18c150eb81422016f88f91630a56d2129)
