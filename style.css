@@ -282,10 +282,15 @@ footer {
 }
 
 .validationMessage {
+    position: absolute;
     text-align: start;
-    color: #ce3136;
+    color: #ff4248;
     font-size: 1.4rem;
-    text-shadow: -0.02rem -0.02rem #de2e34, 0.02rem 0.02rem #000000, 0.02rem -0.02rem #e0af46, -0.02rem 0.02rem #000000;
+    text-shadow: -0.02rem -0.02rem #de2e34, 0.02rem 0.02rem #000000, 0.02rem -0.02rem #2e2a22, -0.02rem 0.02rem #000000;
+}
+
+#textValidationMessage {
+    translate: 0 -65px;
 }
 
 @media (min-width: 560px) {

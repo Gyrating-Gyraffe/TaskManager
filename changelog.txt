@@ -1,3 +1,8 @@
+Hotfix 1.0.1:
+- Fixed a bug with form submission validation.
+- Variable name adjustment for improved consistency
+- Styling of valdiation message
+
 Version 1.0.0:
 - Added validation and user notification for invalid form submissions
 

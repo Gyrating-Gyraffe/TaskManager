@@ -19,7 +19,7 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
     const handleSubmit = function (event) {
         // Stop default form submission
         event.preventDefault();
-        
+
         // Validate task description
         if(!validateForm()) return; 
 
@@ -92,13 +92,13 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
 
     // Validate the three form inputs, if invalid notifies the user and returns false
     function validateForm() {
-        const valid = true;
-        
+        let valid = true;
+
         [document.getElementById("taskArea"), document.getElementById("date"), document.getElementById("time")]
         .forEach(element => {
             if(!element.value) {
                 const validateDiv = element.nextElementSibling;
-                validateDiv.innerHTML = "Please fill out this form.";
+                validateDiv.innerHTML = `* This form is required.`;
                 element.addEventListener("focus", (event) => {
                     validateDiv.innerHTML = "";
                     element.removeEventListener("focus", this);
@@ -107,7 +107,7 @@ import { setupClipboardScroll } from './modules/clipboard.mjs';
             }
         });
 
-        return valid;
+       return valid;
     }
 
     initialize();

@@ -13,7 +13,7 @@ export class Notepad {
      * @param {Object} formObject A form object containing the data that's written in the notes
      */
     createNote(formObject) {
-        const content = formObject.taskDescription;
+        const content = formObject.description;
         const date = formObject.date;
         const time = formObject.time;
 
